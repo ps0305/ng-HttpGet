@@ -9,12 +9,14 @@ import { CountriesService } from '../../services/countries.service';
 export class CountriesComponent implements OnInit {
   private data:any;
 
- constructor(private_service:CountriesService) { }
+ constructor(private_service:CountriesService) { 
+   
+ }
 
   ngOnInit() {
     this._service.getCountries().subscribe(res=>
     this.data=res,
-  err=>console.log(err));
+    err=>console.log(err));
   }
 
 }
