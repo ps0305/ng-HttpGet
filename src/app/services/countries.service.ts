@@ -15,12 +15,15 @@ export class CountriesService {
     //.map for capturing positive response
     .map((response:Response)=>{
       return response.json();
-    });
+    })
+    //.catch =>to catch the error
     .catch(this._handleError);
   }
+  //handleError=>user defined function to catch the error
   public _handleError(err){
     console.log("Error raised...."+err);
-    //observable -to
+
+  //Observables open up a continuous channel of communication in which multiple values of data can be emitted over time.
     return Observable.throw(err || "Internal server error")
   }
 }

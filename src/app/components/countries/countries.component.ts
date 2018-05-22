@@ -9,7 +9,7 @@ import { CountriesService } from '../../services/countries.service';
 export class CountriesComponent implements OnInit {
   private data:any;
 
- constructor(private_service:CountriesService) { 
+ constructor(private _service:CountriesService) { 
    
  }
 
